@@ -8,7 +8,7 @@ export function HomeBanner() {
       py="3"
       align="center"
       justify="space-between"
-      backgroundImage="url('/images/Background.svg')"
+      backgroundImage="url('/images/background.svg')"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
     >
@@ -21,20 +21,20 @@ export function HomeBanner() {
           fontSize="4xl"
           mb="5"
         >
-          5 Continentes, infinitas possibilidades.
+          5 Continents, infinite possibilities.
         </Heading>
 
         <Text
           color="gray.400"
           fontSize="xl"
         >
-          Chegou a hora de tirar do papel a viagem que você sempre sonhou.
+          The time has come to take the trip you have always dreamed of off the drawing board.
         </Text>
       </Box>
 
       <Image
-        src="/images/Airplane.svg"
-        alt="Airplane"
+        src="/images/airplane.svg"
+        alt="airplane"
       />
     </Flex>
   )

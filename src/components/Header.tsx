@@ -31,8 +31,8 @@ export function Header({ backIcon = false }: HeaderProps) {
         )}
 
         <Image
-          src="/images/Logo.svg"
-          alt="Logo"
+          src="/images/logo.svg"
+          alt="logo"
           w="44"
         />
       </Flex>
