@@ -1,4 +1,5 @@
 import { Flex, Divider, Heading, Text } from "@chakra-ui/react";
+import { GetStaticProps } from 'next'
 
 import { makeServer } from '../server/mirageServer'
 
@@ -10,7 +11,6 @@ import { ContinentsSlidesCarousel } from '../components/ContinentsSlidesCarousel
 // makeServer()
 
 export default function Home() {
-
   return (
     <Flex direction="column" w="full">
       <Header />
@@ -47,3 +47,10 @@ export default function Home() {
     </Flex>
   )
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+    revalidate: 60 * 60 * 24, // 24 hours
+  }
+} 
