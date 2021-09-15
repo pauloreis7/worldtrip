@@ -7,10 +7,7 @@ interface TravelTypesProps {
 
 export function TravelTypeItem({ src, title }: TravelTypesProps) {
   return (
-    <Flex
-      direction="column"
-      align="center"
-    >
+    <Flex direction="column" align="center">
       <Image
         src={src}
         alt={title}
