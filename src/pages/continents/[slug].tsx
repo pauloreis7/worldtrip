@@ -1,11 +1,13 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Spinner } from "@chakra-ui/react";
 import { GetStaticProps, GetStaticPaths } from 'next'
+import { useRouter } from "next/dist/client/router";
 
 import { makeServer } from '../../server/mirageServer'
 
 import { Header } from '../../components/Header'
 import { ContinentBanner } from '../../components/ContinentBanner'
 import { ContinentSummarySection } from '../../components/ContinentSummarySection'
+import { Loading } from '../../components/Loading'
 
 interface ContinentInfoSection {
   countries: number;
@@ -32,6 +34,11 @@ interface ContinentDescProps {
 }
 
 export default function ContinentDesc({ continent }: ContinentDescProps) {
+  const router = useRouter()
+  if(router.isFallback) {
+    return <Loading />
+  }
+
   return (
     <Flex direction="column" w="full">
       <Header backIcon />
@@ -53,7 +60,7 @@ export default function ContinentDesc({ continent }: ContinentDescProps) {
           continentInfo={continent.infoSection} 
         />
 
-        
+
       </Flex>
     </Flex>
   )
