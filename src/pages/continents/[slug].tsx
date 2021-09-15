@@ -1,13 +1,14 @@
-import { Flex, Spinner } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from "next/dist/client/router";
 
 import { makeServer } from '../../server/mirageServer'
 
+import { Loading } from '../../components/Loading'
 import { Header } from '../../components/Header'
 import { ContinentBanner } from '../../components/ContinentBanner'
 import { ContinentSummarySection } from '../../components/ContinentSummarySection'
-import { Loading } from '../../components/Loading'
+import { HundredPlusCities } from '../../components/HundredPlusCities'
 
 interface ContinentInfoSection {
   countries: number;
@@ -60,7 +61,7 @@ export default function ContinentDesc({ continent }: ContinentDescProps) {
           continentInfo={continent.infoSection} 
         />
 
-
+        <HundredPlusCities cities={continent.hundredPlusCities} />
       </Flex>
     </Flex>
   )
