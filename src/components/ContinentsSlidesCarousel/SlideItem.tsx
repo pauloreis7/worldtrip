@@ -2,15 +2,15 @@ import { Flex, Heading, Text, Link as ChakraLink } from "@chakra-ui/react";
 import Link from 'next/link'
 
 interface SlideItemProps {
-  slug: string;
+  href: string;
   title: string;
   summary: string;
   imageSource: string;
 }
 
-export function SlideItem({ slug, title, summary, imageSource }: SlideItemProps) {
+export function SlideItem({ href, title, summary, imageSource }: SlideItemProps) {
   return (
-    <Link href={`/continents/${slug}`} passHref>
+    <Link href={href} passHref>
       <ChakraLink _hover={{ textDecoration: 'none' }}>
         <Flex
           direction="column"

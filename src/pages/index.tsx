@@ -1,14 +1,10 @@
 import { Flex, Divider, Heading, Text } from "@chakra-ui/react";
 import { GetStaticProps } from 'next'
 
-import { makeServer } from '../server/mirageServer'
-
 import { Header } from '../components/Header'
 import { HomeBanner } from '../components/HomeBanner'
 import { TravelTypes } from '../components/TravelTypes'
 import { ContinentsSlidesCarousel } from '../components/ContinentsSlidesCarousel'
-
-// makeServer()
 
 export default function Home() {
   return (

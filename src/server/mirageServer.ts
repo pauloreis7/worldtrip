@@ -12,18 +12,6 @@ export function makeServer() {
       server.db.loadData({
         continents: continentsData
       })
-    },
-  
-    routes() {
-      this.namespace = 'api',
-  
-      this.get('/continents/:id', (_, request) => {
-        const continentId = request.params.id
-    
-        const continent = this.schema.find('continent', continentId)
-    
-        return continent
-      })
     }
   })
 }
