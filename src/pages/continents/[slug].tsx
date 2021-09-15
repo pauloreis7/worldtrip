@@ -1,6 +1,10 @@
+import { Flex, Heading, Text, Box } from "@chakra-ui/react";
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 import { makeServer } from '../../server/mirageServer'
+
+import { Header } from '../../components/Header'
+import { ContinentBanner } from '../../components/ContinentBanner'
 
 interface ContinentInfoSection {
   countries: number;
@@ -28,7 +32,23 @@ interface ContinentDescProps {
 
 export default function ContinentDesc({ continent }: ContinentDescProps) {
   return (
-    <h1>Hello World</h1>
+    <Flex direction="column" w="full">
+      <Header backIcon />
+
+      <ContinentBanner continentName={continent.name} bannerUrl={continent.bannerUrl} />
+
+      <Flex
+        direction="column"
+        align="center"
+        w="100%"
+        maxWidth={1120}
+        px="6"
+        mx="auto"
+        my="20"
+      >
+
+      </Flex>
+    </Flex>
   )
 }
 

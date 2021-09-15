@@ -20,7 +20,7 @@ export default function Home() {
         maxWidth={1360}
         my="28"
         mx="auto"
-        px="4"
+        px="6"
       >
         <TravelTypes />
 
