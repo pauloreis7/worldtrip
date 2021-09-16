@@ -17,7 +17,7 @@ export function SlideItem({ href, title, summary, imageSource }: SlideItemProps)
           textAlign="center"
           justify="center"
           align="center"
-          h="md"
+          h={["2xs", "2xs", "md"]}
           bgImage={`url('${imageSource}')`}
           bgPosition='center'
           bgRepeat='no-repeat'
@@ -26,7 +26,7 @@ export function SlideItem({ href, title, summary, imageSource }: SlideItemProps)
           <Heading
             mb="4"
             color="yellow.500"
-            fontSize="5xl"
+            fontSize={["2xl", "2xl", "5xl"]}
             fontWeight="bold"
           >
             {title}
@@ -34,7 +34,7 @@ export function SlideItem({ href, title, summary, imageSource }: SlideItemProps)
 
           <Text
             color="gray.200"
-            fontSize="2xl"
+            fontSize={["sm", "sm", "2xl"]}
             fontWeight="bold"
           >
             {summary}

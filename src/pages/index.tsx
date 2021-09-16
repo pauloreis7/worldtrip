@@ -18,19 +18,23 @@ export default function Home() {
         align="center"
         w="100%"
         maxWidth={1360}
-        my="28"
+        my={["9", "9", "9", "28"]}
         mx="auto"
-        px="6"
+        px={["4", "4", "6"]}
       >
         <TravelTypes />
 
-        <Divider w="5.625rem" borderBottomWidth="2px" mt="20" borderColor="gray.900" />
+        <Divider
+          w={["3.75rem", "3.75rem", "5.625rem"]}
+          borderBottomWidth="2px"
+          mt={["9", "9", "20"]}
+          borderColor="gray.900"
+        />
 
         <Heading
-          w="3xl"
-          my="14"
+          my={["6", "6", "14"]}
           textAlign="center"
-          fontSize="4xl"
+          fontSize={["xl", "xl", "4xl"]}
           fontWeight="medium"
           color="gray.900"
         >

@@ -11,11 +11,11 @@ export function Header({ backIcon = false }: HeaderProps) {
     <Box
       as="header"
       w="full"
-      px="36"
+      px={["6", "6", "36"]}
     >
       <Flex
         w="100%"
-        h="24"
+        h={["64px", "64px", "100px"]}
         align="center"
         justify="center"
         maxWidth={1160}
@@ -25,7 +25,7 @@ export function Header({ backIcon = false }: HeaderProps) {
         {backIcon && (
           <Link href='/'>
             <ChakraLink position='absolute' left="0">
-              <Icon as={FiChevronLeft} fontSize="24" color="gray.900" />
+              <Icon as={FiChevronLeft} fontSize={["md", "md", "24"]} color="gray.900" />
             </ChakraLink>
           </Link>
         )}
@@ -33,7 +33,7 @@ export function Header({ backIcon = false }: HeaderProps) {
         <Image
           src="/images/logo.svg"
           alt="logo"
-          w="44"
+          w={["140px", "140px", "184px"]}
         />
       </Flex>
     </Box>
