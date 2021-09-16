@@ -51,9 +51,9 @@ export default function ContinentDesc({ continent }: ContinentDescProps) {
         align="center"
         w="100%"
         maxWidth={1220}
-        px="6"
+        px={["4", "4", "6"]}
         mx="auto"
-        my="20"
+        my={["6", "6", "20"]}
       >
         
         <ContinentSummarySection 

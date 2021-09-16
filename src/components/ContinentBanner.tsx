@@ -9,7 +9,7 @@ export function ContinentBanner({ continentName, bannerUrl }: ContinentBannerPro
   return (
     <Flex
       w="100%"
-      h="lg"
+      h={["3xs", "3xs", "lg"]}
       px="36"
       py="16"
       backgroundImage={`url('${bannerUrl}')`}
@@ -20,8 +20,8 @@ export function ContinentBanner({ continentName, bannerUrl }: ContinentBannerPro
       justify={["center","center", "flex-start"]}
     >
       <Heading
-        textAlign="left"
-        fontSize="5xl"
+        textAlign={["center", "center", "left"]}
+        fontSize={["3xl", "3xl", "5xl"]}
         fontWeight="semibold"
         color="gray.200"
       >

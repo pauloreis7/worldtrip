@@ -26,7 +26,7 @@ export function City({
       <Flex
         align="center"
         justify="space-between"
-        px="6"
+        px={["4", "6"]}
         pt="6"
         pb="8"
         bgColor="white"

@@ -15,37 +15,42 @@ export function ContinentInfoItem({
   return (
     <Flex direction="column" textAlign="center">
       <Text
-        fontSize="5xl"
+        position="relative"
+        fontSize={["2xl", "3xl", "5xl"]}
         fontWeight="semibold"
         color="yellow.500"
       >
         {itemValue}
-      </Text>
-
-      <Text
-        fontSize="2xl"
-        fontWeight="semibold"
-        color="gray.900"
-      >
-        {title}
 
         { infoTooltip && (
-          <Tooltip 
-            hasArrow
+          <Tooltip
             label="How many cities of +100 visited in the world the continent has."
-            placement="bottom"
+            placement="top"
           >
             <span>
               <Icon 
+                position="absolute"
+                top="0"
+                right="0"
                 as={FiInfo} 
-                ml="1.5" 
-                fontSize="md"
+                ml={["1", "1", "1.5"]} 
+                fontSize={["xs", "sm", "md"]}
                 color="gray.600"
                 opacity={0.5}
               />
             </span>
           </Tooltip>
         )}
+      </Text>
+
+      <Text
+        fontSize={["lg", "xl", "2xl"]}
+        fontWeight="semibold"
+        color="gray.900"
+      >
+        {title}
+
+        
       </Text>
     </Flex>
   )
