@@ -1,6 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from "next/dist/client/router";
+import Head from 'next/head'
 
 import { makeServer } from '../../server/mirageServer'
 
@@ -41,29 +42,35 @@ export default function ContinentDesc({ continent }: ContinentDescProps) {
   }
 
   return (
-    <Flex direction="column" w="full">
-      <Header backIcon />
+    <>
+      <Head>
+        <title>{continent.name} | Worldtrip</title>
+      </Head>
 
-      <ContinentBanner continentName={continent.name} bannerUrl={continent.bannerUrl} />
+      <Flex direction="column" w="full">
+        <Header backIcon />
 
-      <Flex
-        direction="column"
-        align="center"
-        w="100%"
-        maxWidth={1220}
-        px={["4", "4", "6"]}
-        mx="auto"
-        my={["6", "6", "20"]}
-      >
-        
-        <ContinentSummarySection 
-          description={continent.description} 
-          continentInfo={continent.infoSection} 
-        />
+        <ContinentBanner continentName={continent.name} bannerUrl={continent.bannerUrl} />
 
-        <HundredPlusCities cities={continent.hundredPlusCities} />
+        <Flex
+          direction="column"
+          align="center"
+          w="100%"
+          maxWidth={1220}
+          px={["4", "4", "6"]}
+          mx="auto"
+          my={["6", "6", "20"]}
+        >
+          
+          <ContinentSummarySection 
+            description={continent.description} 
+            continentInfo={continent.infoSection} 
+          />
+
+          <HundredPlusCities cities={continent.hundredPlusCities} />
+        </Flex>
       </Flex>
-    </Flex>
+    </>
   )
 }
 
